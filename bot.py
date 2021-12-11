@@ -3,8 +3,14 @@ import discord
 import youtube_dl
 from host import run
 from discord.ext import commands
+import json
 
-bot = commands.Bot(command_prefix="!")
+with open("token.json") as j:
+    data = json.load(j)
+    tk = data["token"]
+    px = data["prefix"]
+
+bot = commands.Bot(command_prefix=px)
 bot.remove_command("help")
 
 @bot.event
@@ -76,4 +82,4 @@ async def resume(ctx):
 
 if __name__ == "__main__":
     run(False)
-    bot.run(os.environ['token'])
+    bot.run(tk)
