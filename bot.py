@@ -5,10 +5,11 @@ from host import run
 from discord.ext import commands
 import json
 
-with open("token.json") as j:
+with open("config.json") as j:
     data = json.load(j)
     tk = data["token"]
     px = data["prefix"]
+    hostz = data["host"]
 
 bot = commands.Bot(command_prefix=px)
 bot.remove_command("help")
@@ -81,5 +82,5 @@ async def resume(ctx):
         await ctx.send("Resumed")
 
 if __name__ == "__main__":
-    run(False)
+    run(hostz)
     bot.run(tk)
