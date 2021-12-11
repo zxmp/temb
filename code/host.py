@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-  return "temb.glitch.me"
+  return "temb.glitch.me - github.com/zxmp/temb"
 
 def runhost():
   app.run(host="0.0.0.0",port=8000)
