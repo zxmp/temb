@@ -81,6 +81,6 @@ async def resume(ctx):
         await ctx.voice_client.resume()
         await ctx.send("Resumed")
 
-if __name__ == "__main__":
+if __name__ == "__bot__":
     run(hostz)
     bot.run(tk)
