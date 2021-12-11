@@ -84,3 +84,5 @@ async def resume(ctx):
 if __name__ == "__bot__":
     run(hostz)
     bot.run(tk)
+else:
+    print(f"Change A name of '{__name__}.py' to 'bot.py'")
