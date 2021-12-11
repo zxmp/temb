@@ -9,8 +9,8 @@ bot.remove_command("help")
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(name="temb"), status=discord.Status.idle)
-    print("ready")
+    await bot.change_presence(activity=discord.Game(name="temb source - github.com/zxmp/temb"), status=discord.Status.idle)
+    print(f"INFO: Logged As {bot.user} !")
 
 @bot.command()
 async def help(ctx):
