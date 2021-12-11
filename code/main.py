@@ -1,6 +1,7 @@
 import os
 import discord
 import youtube_dl
+from host import run
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix="!")
@@ -74,4 +75,5 @@ async def resume(ctx):
         await ctx.send("Resumed")
 
 if __name__ == "__main__":
+    run(False)
     bot.run(os.environ['token'])
